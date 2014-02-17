@@ -12,7 +12,11 @@
 
 @end
 
-@implementation AutoreadViewController
+@implementation AutoreadViewController {
+    NSArray *autoRead1;
+    NSArray *autoRead2;
+    NSArray *autoRead3;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +31,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    autoRead1 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
+    autoRead2 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
+    autoRead3 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
+    
+    NSLog(@"Autoread 1: %@", autoRead1);
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +47,27 @@
 
 - (IBAction)unwindToAutoreadViewController: (UIStoryboardSegue *) segue {
     
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [autoRead1 count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *identifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (cell == nil) {
+        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
+    cell.textLabel.text = autoRead1[indexPath.row];
+    return cell;
 }
 
 @end

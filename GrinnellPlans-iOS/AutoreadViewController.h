@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AutoreadViewController : UIViewController
+@interface AutoreadViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
 
 @end
