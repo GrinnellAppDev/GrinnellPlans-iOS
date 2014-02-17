@@ -8,8 +8,11 @@
 
 #import "PlanViewController.h"
 #import "UIViewController+ECSlidingViewController.h"
+#import "MEZoomAnimationController.h"
 
 @interface PlanViewController ()
+
+@property (nonatomic, strong) MEZoomAnimationController *zoomTransition;
 
 @end
 
@@ -29,7 +32,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-
+    self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
+    self.slidingViewController.customAnchoredGestures = @[];
+    [[self.navigationController.viewControllers.firstObject view] addGestureRecognizer:self.slidingViewController.panGesture];
     
 }
 
