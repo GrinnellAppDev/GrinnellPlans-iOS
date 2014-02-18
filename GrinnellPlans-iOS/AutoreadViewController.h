@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AutoreadViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+- (IBAction)markAsRead:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "AutoreadViewController.h"
+#import "AutoReadCell.h"
 
 @interface AutoreadViewController ()
 
@@ -57,17 +58,37 @@
     return [autoRead1 count];
 }
 
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+   
+    NSString *sectionName;
+    switch (section)
+    {
+        case 0:
+            sectionName = @"Level 1";
+            break;
+        case 1:
+            sectionName = @"Level 2";
+            break;
+        default:
+            sectionName = @"Level 3";
+            break;
+    }
+    return sectionName;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *identifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    AutoReadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == nil) {
-        UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        AutoReadCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
     cell.textLabel.text = autoRead1[indexPath.row];
     return cell;
 }
 
+- (IBAction)markAsRead:(id)sender {
+}
 @end

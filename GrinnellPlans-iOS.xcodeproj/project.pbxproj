@@ -143,19 +143,19 @@
 				8B7792F518B2C9AB007404B9 /* Transitions */,
 				8B0463B518A04F1A00869FE7 /* AppDelegate.h */,
 				8B0463B618A04F1A00869FE7 /* AppDelegate.m */,
-				8B0463B818A04F1A00869FE7 /* Main.storyboard */,
 				8B0463BB18A04F1A00869FE7 /* ViewController.h */,
 				8B0463BC18A04F1A00869FE7 /* ViewController.m */,
 				8B7792DD18B133AC007404B9 /* PlanViewController.h */,
 				8B7792DE18B133AC007404B9 /* PlanViewController.m */,
 				8B0463BE18A04F1A00869FE7 /* Images.xcassets */,
-				8B0463AD18A04F1A00869FE7 /* Supporting Files */,
 				8B7792EC18B15145007404B9 /* SlidingViewController.h */,
 				8B7792ED18B15145007404B9 /* SlidingViewController.m */,
 				8B7792EF18B153EC007404B9 /* MenuViewController.h */,
 				8B7792F018B153EC007404B9 /* MenuViewController.m */,
 				8B7792F218B1587B007404B9 /* AutoreadViewController.h */,
 				8B7792F318B1587B007404B9 /* AutoreadViewController.m */,
+				8B0463B818A04F1A00869FE7 /* Main.storyboard */,
+				8B0463AD18A04F1A00869FE7 /* Supporting Files */,
 			);
 			path = "GrinnellPlans-iOS";
 			sourceTree = "<group>";
