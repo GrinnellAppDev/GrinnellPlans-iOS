@@ -32,6 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    // setup swipe and button gestures for the sliding view controller
     self.slidingViewController.topViewAnchoredGesture = ECSlidingViewControllerAnchoredGestureTapping | ECSlidingViewControllerAnchoredGesturePanning;
     self.slidingViewController.customAnchoredGestures = @[];
     [[self.navigationController.viewControllers.firstObject view] addGestureRecognizer:self.slidingViewController.panGesture];

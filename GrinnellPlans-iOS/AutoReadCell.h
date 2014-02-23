@@ -10,4 +10,13 @@
 
 @interface AutoReadCell : UITableViewCell
 
+@property (nonatomic, strong) NSString *username;
+@property (nonatomic, strong) NSURL *planLink;
+@property (nonatomic) NSInteger level;
+
+- (id) autoReadCellWithUsername:(NSString *)user andPlanLink:(NSURL *) link andLevel:(NSInteger) userLevel;
+
+- (id) autoReadCellWithUsername:(NSString *)user andLevel:(NSInteger)userLevel;
+
+
 @end

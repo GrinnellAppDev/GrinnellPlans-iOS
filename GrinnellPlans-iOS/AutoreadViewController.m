@@ -17,6 +17,7 @@
     NSArray *autoRead1;
     NSArray *autoRead2;
     NSArray *autoRead3;
+    NSMutableArray *autoReadCells;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -36,6 +37,9 @@
     autoRead1 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
     autoRead2 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
     autoRead3 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
+    
+    autoReadCells = [[NSMutableArray alloc] init];
+    
     
     NSLog(@"Autoread 1: %@", autoRead1);
 }
@@ -82,7 +86,7 @@
     AutoReadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     
     if (cell == nil) {
-        AutoReadCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        AutoReadCell *cell = [[AutoReadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
     cell.textLabel.text = autoRead1[indexPath.row];

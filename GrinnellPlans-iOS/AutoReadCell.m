@@ -26,4 +26,23 @@
     // Configure the view for the selected state
 }
 
+- (id) autoReadCellWithUsername:(NSString *)user andPlanLink:(NSURL *)link andLevel:(NSInteger)userLevel {
+    AutoReadCell *cell = [[AutoReadCell alloc] init];
+    
+    [cell setUsername:user];
+    [cell setLevel:userLevel];
+    [cell setPlanLink:link];
+    
+    return cell;
+}
+
+- (id) autoReadCellWithUsername:(NSString *)user andLevel:(NSInteger)userLevel {
+    AutoReadCell *cell = [[AutoReadCell alloc] init];
+    
+    [cell setUsername:user];
+    [cell setLevel:userLevel];
+    
+    return cell;
+}
+
 @end
