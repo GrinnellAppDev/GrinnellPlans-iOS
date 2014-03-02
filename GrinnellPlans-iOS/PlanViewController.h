@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UITextView *planTextView;
 @property (strong, nonatomic) IBOutlet UITabBar *tabBar;
+@property (strong, nonatomic) IBOutlet UITabBarItem *editButton;
+@property (strong, nonatomic) IBOutlet UITabBarItem *nextPlanButton;
 
 @end

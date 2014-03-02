@@ -88,6 +88,8 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="editButton" destination="kkb-MT-QMg" id="i3A-rJ-ghs"/>
+                        <outlet property="nextPlanButton" destination="zp1-fP-vpp" id="N8c-8j-M9C"/>
                         <outlet property="tabBar" destination="X71-6h-9fA" id="cy2-ql-lgT"/>
                     </connections>
                 </viewController>
