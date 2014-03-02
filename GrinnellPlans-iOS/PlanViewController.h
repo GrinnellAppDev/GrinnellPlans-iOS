@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "P2MSTextView.h"
 
-@interface PlanViewController : UIViewController <P2MSTextViewDelegate>
+@interface PlanViewController : UIViewController <P2MSTextViewDelegate, UITabBarDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
 @property (strong, nonatomic) IBOutlet UITextView *planTextView;
+@property (strong, nonatomic) IBOutlet UITabBar *tabBar;
 
 @end

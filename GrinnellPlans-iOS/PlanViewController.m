@@ -50,7 +50,7 @@
     NSMutableArray *AR3 = [NSMutableArray arrayWithArray: @[@"moujaled", @"tremblay", @"cohnhann"]];
     
     // Let's make sure that when we ask for the API we ask for it to have newline characters - \n instead of <br> tags, because those won'r work! It would also be nice not to have <hr> tags... just saying
-    NSString *attributedPlan = @"I'd love to meet up for coffee/dinner/dessert\n\n\n or all of the above :D! Let me know when you're free [woolerys]! I think we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development. I'd love to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I think we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development. I'd love to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I think we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development. I'd love to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I think we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development.";
+    NSString *attributedPlan = @"I'd <b>love</b> to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I <strike>think</strike> we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development.";
     
     NSString *test = @"<b>Saturday March 1, 2014. 3:12 PM</b><a href='http://www.grinnellplans.com/'>LEA</a>";
     
@@ -72,12 +72,34 @@
     [textView becomeFirstResponder];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
-    button.frame = CGRectMake(10, 150, 30, 30);
+    button.frame = CGRectMake(10, 250, 30, 30);
     [button addTarget:self action:@selector(exportString:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     
 	// Do any additional setup after loading the view.
     
+    //self.tabBarController
+    
+    // set delegate for tabbar here
+    self.tabBar.delegate = self;
+//    textView.editable = NO;
+    [textView setUserInteractionEnabled:NO];
+    
+}
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    if([item.title isEqualToString:@"Edit"]) {
+        // do something for this specific button
+        textView.editable = YES;
+        [textView setUserInteractionEnabled:YES];
+        [textView becomeFirstResponder];
+        [textView showKeyboard:KEYBOARD_TYPE_DEFAULT];
+    }
+    
+    if ([item.title isEqualToString:@"NextPlan"]) {
+        // TO DO: Make it go to some next plan
+    }
 }
 
 - (IBAction)exportString:(id)sender{
@@ -136,6 +158,23 @@
 - (IBAction)saveEdits:(id)sender{
     // action for done button to resign the keyboard and
     // TODO: save what's been changed in the plan and upload it to the website
+    
+    NSMutableDictionary *attribs = [[NSMutableDictionary alloc] init];
+    attribs = [textView getStyleAttributes];
+    NSMutableArray *hyperLinks = [[NSMutableArray alloc] init];
+    hyperLinks = [attribs objectForKey:@"links"];
+    
+    NSLog(@"Hyper Links: %@", hyperLinks.lastObject);
+    
+    for (P2MSLink *curLink in hyperLinks) {
+    
+        NSLog(@"The actual link: %@", curLink.linkURL);
+    }
+    
+    textView.editable = NO;
+    [textView setUserInteractionEnabled:NO];
+    
+
     [textView resignFirstResponder];
 }
 

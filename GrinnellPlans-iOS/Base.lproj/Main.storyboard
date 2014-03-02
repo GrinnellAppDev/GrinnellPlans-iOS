@@ -67,8 +67,8 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <tabBarItem systemItem="favorites" id="kkb-MT-QMg"/>
-                                    <tabBarItem systemItem="more" id="w40-ID-jqR"/>
+                                    <tabBarItem title="Edit" image="strike-icon.png" id="kkb-MT-QMg"/>
+                                    <tabBarItem title="[torresda]" image="strike-icon-hover.png" id="zp1-fP-vpp"/>
                                 </items>
                             </tabBar>
                         </subviews>
@@ -87,6 +87,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tabBar" destination="X71-6h-9fA" id="cy2-ql-lgT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMf-pb-aTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pEB-QY-OLB" userLabel="Exit" sceneMemberID="exit"/>
@@ -276,6 +279,18 @@
                     <view key="view" contentMode="scaleToFill" id="ojf-tR-Bi1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbX-rS-YwO">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="fFG-Yq-CbL"/>
+                                    <tabBarItem systemItem="history" id="FbF-Ce-7Bh"/>
+                                    <tabBarItem systemItem="more" id="k83-Am-4st"/>
+                                </items>
+                            </tabBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Plan" id="f4d-a0-4rQ">
@@ -298,6 +313,10 @@
             <point key="canvasLocation" x="870" y="-164"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="strike-icon-hover.png" width="16" height="14"/>
+        <image name="strike-icon.png" width="16" height="14"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
