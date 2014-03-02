@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "P2MSTextView.h"
 
-@interface PlanViewController : UIViewController
+@interface PlanViewController : UIViewController <P2MSTextViewDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *usernameLabel;
+@property (strong, nonatomic) IBOutlet UITextView *planTextView;
 
 @end
