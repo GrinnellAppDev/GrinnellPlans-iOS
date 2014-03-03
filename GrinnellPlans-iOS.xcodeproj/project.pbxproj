@@ -21,6 +21,7 @@
 		8B0463C818A04F1A00869FE7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0463AA18A04F1A00869FE7 /* UIKit.framework */; };
 		8B0463D018A04F1A00869FE7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B0463CE18A04F1A00869FE7 /* InfoPlist.strings */; };
 		8B0463D218A04F1A00869FE7 /* GrinnellPlans_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0463D118A04F1A00869FE7 /* GrinnellPlans_iOSTests.m */; };
+		8B220ECA18C539CD0043010A /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B220EC918C539CD0043010A /* TestViewController.m */; };
 		8B52BFE818C2665C00857982 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFE718C2665C00857982 /* Plan.m */; };
 		8B52BFF218C2E0CD00857982 /* SyntexHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFF118C2E0CD00857982 /* SyntexHighlightTextStorage.m */; };
 		8B52BFF518C2E37200857982 /* OtherPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFF418C2E37200857982 /* OtherPlanViewController.m */; };
@@ -135,6 +136,8 @@
 		8B0463CD18A04F1A00869FE7 /* GrinnellPlans-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GrinnellPlans-iOSTests-Info.plist"; sourceTree = "<group>"; };
 		8B0463CF18A04F1A00869FE7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8B0463D118A04F1A00869FE7 /* GrinnellPlans_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GrinnellPlans_iOSTests.m; sourceTree = "<group>"; };
+		8B220EC818C539CD0043010A /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		8B220EC918C539CD0043010A /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		8B52BFE618C2665C00857982 /* Plan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plan.h; sourceTree = "<group>"; };
 		8B52BFE718C2665C00857982 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 		8B52BFF018C2E0CD00857982 /* SyntexHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntexHighlightTextStorage.h; sourceTree = "<group>"; };
@@ -319,6 +322,8 @@
 				8B7792F318B1587B007404B9 /* AutoreadViewController.m */,
 				8B52BFF318C2E37200857982 /* OtherPlanViewController.h */,
 				8B52BFF418C2E37200857982 /* OtherPlanViewController.m */,
+				8B220EC818C539CD0043010A /* TestViewController.h */,
+				8B220EC918C539CD0043010A /* TestViewController.m */,
 				8B0463BE18A04F1A00869FE7 /* Images.xcassets */,
 				8B0463B818A04F1A00869FE7 /* Main.storyboard */,
 				8B0463AD18A04F1A00869FE7 /* Supporting Files */,
@@ -698,6 +703,7 @@
 				8B52C0AE18C2ED7300857982 /* P2MSGlobalFunctions.m in Sources */,
 				8B52C0AF18C2ED7300857982 /* P2MSHTMLNode.m in Sources */,
 				8B52C0B318C2ED7300857982 /* P2MSSelectionView.m in Sources */,
+				8B220ECA18C539CD0043010A /* TestViewController.m in Sources */,
 				8B0463B718A04F1A00869FE7 /* AppDelegate.m in Sources */,
 				8B52C0AD18C2ED7300857982 /* P2MSContentView.m in Sources */,
 				8B52C0AC18C2ED7300857982 /* P2MSCaretView.m in Sources */,

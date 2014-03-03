@@ -8,6 +8,7 @@
 
 #import "AutoreadViewController.h"
 #import "AutoReadCell.h"
+#import "UIViewController+ECSlidingViewController.h"
 
 @interface AutoreadViewController ()
 
