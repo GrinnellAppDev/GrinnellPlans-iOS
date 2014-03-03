@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate>
+@interface MenuViewController : UIViewController 
+
+@property (strong, nonatomic) NSString *cellIdentifier;
+@property (strong, nonatomic) NSArray *menuContent;
 
 @end

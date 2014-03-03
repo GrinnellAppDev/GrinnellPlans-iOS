@@ -16,6 +16,8 @@
 
 @implementation MenuViewController
 
+@synthesize menuContent, cellIdentifier;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,7 +32,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.menuContent = [NSArray arrayWithObjects:@"QuickLove", @"Preferences", @"Log Out", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,6 +43,47 @@
 
 - (IBAction)unwindToMenuViewController: (UIStoryboardSegue *) segue {
     
+}
+
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.menuContent.count;
+}
+
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    /*
+     
+     NSString *identifier = @"Cell";
+     
+     AutoReadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+     
+     if (cell == nil) {
+     AutoReadCell *cell = [[AutoReadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+     }
+     
+     cell.textLabel.text = autoRead1[indexPath.row];
+     return cell;*/
+    self.cellIdentifier = @"menuCell";
+
+
+    //[tableView registerNib:[UINib nibWithNibName:@"menuCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    
+    cell.textLabel.text = [menuContent objectAtIndex:indexPath.row];
+    
+    return cell;
 }
 
 @end
