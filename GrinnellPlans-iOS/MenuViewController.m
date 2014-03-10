@@ -45,6 +45,8 @@
     
 }
 
+#pragma Table View Methods
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -59,22 +61,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
-     
-     NSString *identifier = @"Cell";
-     
-     AutoReadCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-     
-     if (cell == nil) {
-     AutoReadCell *cell = [[AutoReadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-     }
-     
-     cell.textLabel.text = autoRead1[indexPath.row];
-     return cell;*/
     self.cellIdentifier = @"menuCell";
-
-
-    //[tableView registerNib:[UINib nibWithNibName:@"menuCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {

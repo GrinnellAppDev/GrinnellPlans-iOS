@@ -12,5 +12,5 @@
 
 @property (strong, nonatomic) NSString *cellIdentifier;
 @property (strong, nonatomic) NSArray *menuContent;
-
+@property (weak, nonatomic)IBOutlet UITableView *menuTableView;
 @end

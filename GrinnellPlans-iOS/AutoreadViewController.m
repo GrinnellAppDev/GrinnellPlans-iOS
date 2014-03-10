@@ -34,14 +34,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    autoRead1 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
-    autoRead2 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
-    autoRead3 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", nil];
+    autoRead1 = [[NSArray alloc] initWithObjects:@"maroltso", @"torresda", @"cohnhan", nil];
+    autoRead2 = [[NSArray alloc] initWithObjects:@"yuanlife",@"someone123", @"mardisaa", @"dsfasdfa",@"libertos", nil];
+    autoRead3 = [[NSArray alloc] initWithObjects:@"unimportant1", @"1256fff567", @"frogsfoobar", @"dukonglee", nil];
     
     autoReadCells = [[NSMutableArray alloc] init];
     
-    
-    NSLog(@"Autoread 1: %@", autoRead1);
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,12 +52,28 @@
     
 }
 
+#pragma Table View Methods
+
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [autoRead1 count];
+//    return [autoRead1 count];
+    NSInteger *count;
+    switch (section)
+    {
+        case 0:
+            count = [autoRead1 count];
+            break;
+        case 1:
+            count = [autoRead2 count];
+            break;
+        default:
+            count = [autoRead3 count];
+            break;
+    }
+    return count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -89,7 +103,21 @@
         AutoReadCell *cell = [[AutoReadCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = autoRead1[indexPath.row];
+    switch (indexPath.section)
+    {
+        case 0:
+            cell.textLabel.text = autoRead1[indexPath.row];
+            break;
+        case 1:
+            cell.textLabel.text = autoRead2[indexPath.row];
+            break;
+        default:
+            cell.textLabel.text = autoRead3[indexPath.row];
+            break;
+    }
+    
+    //For aesthetics
+    cell.textLabel.text =[@"[" stringByAppendingString:[cell.textLabel.text stringByAppendingString:@"]"]];
     return cell;
 }
 
