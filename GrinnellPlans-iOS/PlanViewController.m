@@ -69,7 +69,11 @@
     textView.inputAccessoryView = [self inputAccessoryView];
     [textView importHTMLString:attributedPlan];
     [self.view addSubview:textView];
-    [textView becomeFirstResponder];
+    
+    // make sure to find all possible problems of switching the topviewcontroller
+    // TO DO: move all the layout stuff out of viewdidload into a new method
+    
+    //[textView becomeFirstResponder];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
     button.frame = CGRectMake(10, 250, 30, 30);
@@ -84,6 +88,10 @@
     self.tabBar.delegate = self;
     textView.editable = NO;
     
+}
+
+- (void) showKeyboard {
+    [textView becomeFirstResponder];
 }
 
 -(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item

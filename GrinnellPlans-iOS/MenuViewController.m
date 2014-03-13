@@ -73,4 +73,10 @@
     return cell;
 }
 
+-(IBAction)dontfail:(id)sender {
+    self.slidingViewController.topViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"failedNav"];
+    [self.slidingViewController resetTopViewAnimated:YES];
+    
+}
+
 @end
