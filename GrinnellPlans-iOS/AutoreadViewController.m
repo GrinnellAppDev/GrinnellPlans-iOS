@@ -64,16 +64,16 @@
     switch (section)
     {
         case 0:
-            count = [autoRead1 count];
+            count = (long *)[autoRead1 count];
             break;
         case 1:
-            count = [autoRead2 count];
+            count = (long *)[autoRead2 count];
             break;
         default:
-            count = [autoRead3 count];
+            count = (long *)[autoRead3 count];
             break;
     }
-    return count;
+    return *count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

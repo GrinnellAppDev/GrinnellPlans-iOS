@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
   ECSlidingViewController: d7bb96ee5bbe261ed80ee16a513f94b9fd3c9767
   MMDrawerController: 60bce0387ff42670d9a5a392e2f531be2fd39ce9
 
-COCOAPODS: 0.26.2
+COCOAPODS: 0.31.1

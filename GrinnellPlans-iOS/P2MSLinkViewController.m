@@ -69,8 +69,8 @@
 
 #pragma mark - Table view data source
 
--(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 34.0f;
+-(double)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 34.0;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
