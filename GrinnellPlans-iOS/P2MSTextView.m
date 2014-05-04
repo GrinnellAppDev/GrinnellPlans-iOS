@@ -533,7 +533,7 @@ typedef enum {
         if (linkVC.linkRange.location == NSNotFound && _selectedRange.length) {
             linkVC.linkRange = _selectedRange;
         }
-        [((UIViewController *)self.textViewDelegate) presentModalViewController:linkVC animated:YES];
+        [((UIViewController *)self.textViewDelegate) presentViewController:linkVC animated:YES completion:nil];
     }
 }
 
@@ -857,7 +857,7 @@ NSComparisonResult (^globalSortBlock)(id,id) = ^(id lhs, id rhs) {
     NSSortDescriptor *sort = [[NSSortDescriptor alloc]initWithKey:@"self" ascending:YES comparator:globalSortBlock];
     NSMutableArray *arr = [[curParagraphs sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]]mutableCopy];
     [curParagraphs removeAllObjects];
-    int paraCountM1 = arr.count-1;
+    int paraCountM1 = (int)(arr.count)-1;
     for (int i = 0; i < paraCountM1; i++) {
         P2MSParagraphStyle *curPara = [arr objectAtIndex:i];
         P2MSParagraphStyle *nextPara = [arr objectAtIndex:i+1];
@@ -1185,7 +1185,7 @@ NSComparisonResult (^globalSortBlock)(id,id) = ^(id lhs, id rhs) {
  */
 - (CGRect)caretRectForPosition:(UITextPosition *)position
 {
-    CGRect rect =  [self.textView caretRectForIndex:((P2MSIndexedPosition *)position).index];
+    CGRect rect =  [self.textView caretRectForIndex:(int)((P2MSIndexedPosition *)position).index];
     return [self convertRect:rect fromView:self.textView];
 }
 
@@ -1844,7 +1844,7 @@ NSComparisonResult (^globalSortBlock)(id,id) = ^(id lhs, id rhs) {
             [menuItemActions removeAllObjects];
         }
         for (NSString *word in guesses){
-            NSString *selString = [NSString stringWithFormat:@"spellCheckMenu_%i:", [word hash]];
+            NSString *selString = [NSString stringWithFormat:@"spellCheckMenu_%lu:", (unsigned long)[word hash]];
             SEL sel = sel_registerName([selString UTF8String]);
             [menuItemActions setObject:word forKey:NSStringFromSelector(sel)];
             class_addMethod([self class], sel, [[self class] instanceMethodForSelector:@selector(correctSpelling:)], "v@:@");
@@ -2231,7 +2231,7 @@ NSComparisonResult (^globalSortBlock)(id,id) = ^(id lhs, id rhs) {
 
 #pragma mark LinkViewDelegate
 - (void)linkViewDidCancel:(P2MSLinkViewController *)viewController{
-    [((UIViewController *)self.textViewDelegate) dismissModalViewControllerAnimated:YES];
+    [((UIViewController *)self.textViewDelegate) dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)linkViewDidClose:(P2MSLinkViewController *)viewController{
@@ -2256,7 +2256,7 @@ NSComparisonResult (^globalSortBlock)(id,id) = ^(id lhs, id rhs) {
             [_textViewDelegate p2msTextViewLinkAdded:self andLink:link];
         }
     }
-    [((UIViewController *)self.textViewDelegate) dismissModalViewControllerAnimated:YES];
+    [((UIViewController *)self.textViewDelegate) dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark HTML Related

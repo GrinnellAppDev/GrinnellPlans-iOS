@@ -95,7 +95,7 @@ static CGFloat MAX_POSSIBLE_HEIGHT = 100000;
     
     P2MSTextView *textView = (P2MSTextView *)self.superview;
     if (textView.selectedRange.length == 0) {
-        self.caretView.frame = [self caretRectForIndex:textView.selectedRange.location];
+        self.caretView.frame = [self caretRectForIndex:(int)textView.selectedRange.location];
         _caretView.hidden = NO;
         [self setNeedsDisplay];
         [self.caretView blinkCaret];
@@ -511,7 +511,7 @@ static CGFloat MAX_POSSIBLE_HEIGHT = 100000;
             if (lineRange.location == 0 || (lineRange.location > 0 && [_contentText characterAtIndex:lineRange.location-1] == '\n')) {
                 if (origin.x >= 28) {
                     curNumberIndex++;
-                    NSString *numString = [NSString stringWithFormat:@"%d.", curNumberIndex];
+                    NSString *numString = [NSString stringWithFormat:@"%ld.", (long)curNumberIndex];
                     CFAttributedStringRef numAttrString = CFAttributedStringCreate(kCFAllocatorDefault, (__bridge CFStringRef)(numString), numAttributes);
                     CTLineRef line = CTLineCreateWithAttributedString(numAttrString);
                     // Set text position and draw the line into the graphics context
@@ -617,7 +617,7 @@ static CGFloat MAX_POSSIBLE_HEIGHT = 100000;
                 index = (newRange.location+newRange.length);
                 textView.selectedRange = newRange;
             }
-            rect = [self caretRectForIndex:index];
+            rect = [self caretRectForIndex:(int)index];
             if (gesture.state == UIGestureRecognizerStateBegan) {
                 [textWindow showTextWindowFromView:self rect:[self convertRect:rect toView:textWindow]];
             } else {
@@ -655,7 +655,7 @@ static CGFloat MAX_POSSIBLE_HEIGHT = 100000;
     P2MSTextView *textView = (P2MSTextView *)self.superview;
     UILongPressGestureRecognizer *longPress = textView.longPressGestureRecognizer;
     if (textView.selectedRange.length == 0) {
-        _caretView.frame = [self caretRectForIndex:textView.selectedRange.location];
+        _caretView.frame = [self caretRectForIndex:(int)textView.selectedRange.location];
         if (_selectionView != nil) {
             [_selectionView removeFromSuperview];
             _selectionView = nil;
@@ -874,7 +874,7 @@ static CGFloat MAX_POSSIBLE_HEIGHT = 100000;
         origin.y = floorf(curFont.ascender-curFont.capHeight);
         return CGRectMake(origin.x+padLeading, origin.y+curFont.descender-curFont.lineHeight, 3, curFont.ascender + fabs(curFont.descender));
     }
-    index = MIN(index, _contentText.length);
+    index = (int)MIN(index, _contentText.length);
     
     CFArrayRef lines = CTFrameGetLines(_ctFrame);
     CFIndex linesCount = CFArrayGetCount(lines);

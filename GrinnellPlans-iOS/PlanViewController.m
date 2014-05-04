@@ -52,15 +52,15 @@
     // Let's make sure that when we ask for the API we ask for it to have newline characters - \n instead of <br> tags, because those won'r work! It would also be nice not to have <hr> tags... just saying
     NSString *attributedPlan = @"I'd <b>love</b> to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I <strike>think</strike> we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development. I'd <b>love</b> to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I <strike>think</strike> we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development. I'd <b>love</b> to meet up for coffee/dinner/dessert or all of the above :D! Let me know when you're free [woolerys]! I <strike>think</strike> we'll go ahead and make a responsive style sheet with bootstrap first, so people can get a hang of using it on their mobile devices, and then dive into the native app development.";
     
-    NSString *test = @"<b>Saturday March 1, 2014. 3:12 PM</b><a href='http://www.grinnellplans.com/'>LEA</a>";
+  //  NSString *test = @"<b>Saturday March 1, 2014. 3:12 PM</b><a href='http://www.grinnellplans.com/'>LEA</a>";
     
-    Plan *myPlan = [[Plan alloc] planWithUsername:@"maroltso" andPlan:attributedPlan andAutoRead1:AR1 andAutoRead2:AR2 andAutoRead3:AR3];
+   // Plan *myPlan = [[Plan alloc] planWithUsername:@"maroltso" andPlan:attributedPlan andAutoRead1:AR1 andAutoRead2:AR2 andAutoRead3:AR3];
     
 //    self.usernameLabel.text = [NSString stringWithFormat:@"[%@]", myPlan.username];
 //    self.planTextView.text = myPlan.planText;
     
     CGSize curSize = [UIScreen mainScreen].bounds.size;
-    CGFloat curHeight = UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation)?curSize.height:curSize.width;
+   // CGFloat curHeight = UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation)?curSize.height:curSize.width;
     
     textView = [[P2MSTextView alloc]initWithFrame:CGRectMake(0, 65, 320, 250)];
     textView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:0.9];

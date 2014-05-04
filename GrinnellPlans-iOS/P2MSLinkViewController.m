@@ -182,7 +182,7 @@
     if (self.delegate) {
         [_delegate linkViewDidCancel:self];
     }else
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)addLink:(id)sender{
@@ -192,7 +192,7 @@
     if (self.delegate) {
         [_delegate linkViewDidClose:self];
     }else
-        [self dismissModalViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark textFieldDelegate
