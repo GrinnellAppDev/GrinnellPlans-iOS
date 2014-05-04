@@ -60,20 +60,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 //    return [autoRead1 count];
-    NSInteger *count;
+    NSInteger count;
     switch (section)
     {
         case 0:
-            count = (long *)[autoRead1 count];
+            count = [autoRead1 count];
             break;
         case 1:
-            count = (long *)[autoRead2 count];
+            count = [autoRead2 count];
             break;
         default:
-            count = (long *)[autoRead3 count];
+            count = [autoRead3 count];
             break;
     }
-    return *count;
+    return count;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
