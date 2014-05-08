@@ -96,6 +96,10 @@
 		8B77930218B2CAE9007404B9 /* AutoReadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B77930118B2CAE9007404B9 /* AutoReadCell.m */; };
 		BB995030D7744477A697B888 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF27D8043F4B4F6D8255F490 /* libPods.a */; };
 		D0C3AD801918435F00418587 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C3AD7F1918435F00418587 /* MainViewController.m */; };
+		D0C9D600191BF8650084F061 /* AutoreadMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9D5FF191BF8650084F061 /* AutoreadMenuViewController.m */; };
+		D0C9D603191BF9380084F061 /* MainMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C9D602191BF9380084F061 /* MainMenuTableViewController.m */; };
+		D0F5FD1B191C2A4600CDC427 /* EditPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5FD1A191C2A4600CDC427 /* EditPlanViewController.m */; };
+		D0F5FD1E191C2CF900CDC427 /* QuickLoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5FD1D191C2CF900CDC427 /* QuickLoveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +221,14 @@
 		8B77930118B2CAE9007404B9 /* AutoReadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoReadCell.m; sourceTree = "<group>"; };
 		D0C3AD7E1918435F00418587 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D0C3AD7F1918435F00418587 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D0C9D5FE191BF8650084F061 /* AutoreadMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoreadMenuViewController.h; sourceTree = "<group>"; };
+		D0C9D5FF191BF8650084F061 /* AutoreadMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoreadMenuViewController.m; sourceTree = "<group>"; };
+		D0C9D601191BF9380084F061 /* MainMenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuTableViewController.h; sourceTree = "<group>"; };
+		D0C9D602191BF9380084F061 /* MainMenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuTableViewController.m; sourceTree = "<group>"; };
+		D0F5FD19191C2A4600CDC427 /* EditPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPlanViewController.h; sourceTree = "<group>"; };
+		D0F5FD1A191C2A4600CDC427 /* EditPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPlanViewController.m; sourceTree = "<group>"; };
+		D0F5FD1C191C2CF900CDC427 /* QuickLoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLoveViewController.h; sourceTree = "<group>"; };
+		D0F5FD1D191C2CF900CDC427 /* QuickLoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLoveViewController.m; sourceTree = "<group>"; };
 		E8847BF72C314F4CBD5C64B7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FF27D8043F4B4F6D8255F490 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -287,6 +299,14 @@
 				8B0463B618A04F1A00869FE7 /* AppDelegate.m */,
 				8B0463BE18A04F1A00869FE7 /* Images.xcassets */,
 				8B0463B818A04F1A00869FE7 /* Main.storyboard */,
+				D0F5FD1C191C2CF900CDC427 /* QuickLoveViewController.h */,
+				D0F5FD1D191C2CF900CDC427 /* QuickLoveViewController.m */,
+				D0C9D601191BF9380084F061 /* MainMenuTableViewController.h */,
+				D0C9D602191BF9380084F061 /* MainMenuTableViewController.m */,
+				D0C9D5FE191BF8650084F061 /* AutoreadMenuViewController.h */,
+				D0C9D5FF191BF8650084F061 /* AutoreadMenuViewController.m */,
+				D0F5FD19191C2A4600CDC427 /* EditPlanViewController.h */,
+				D0F5FD1A191C2A4600CDC427 /* EditPlanViewController.m */,
 				D0C3AD7E1918435F00418587 /* MainViewController.h */,
 				D0C3AD7F1918435F00418587 /* MainViewController.m */,
 				8B0463AD18A04F1A00869FE7 /* Supporting Files */,
@@ -650,13 +670,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B52BFE818C2665C00857982 /* Plan.m in Sources */,
+				D0C9D600191BF8650084F061 /* AutoreadMenuViewController.m in Sources */,
 				8B52C0B218C2ED7300857982 /* P2MSLinkViewController.m in Sources */,
 				8B52C0B018C2ED7300857982 /* P2MSIndexedPosition.m in Sources */,
+				D0F5FD1E191C2CF900CDC427 /* QuickLoveViewController.m in Sources */,
 				8B540B8018C2F3D200AB192E /* P2MSTextView.m in Sources */,
 				8B52C0B518C2ED7300857982 /* P2MSWindowView.m in Sources */,
 				8B52C0B118C2ED7300857982 /* P2MSIndexedRange.m in Sources */,
 				8B52C0AE18C2ED7300857982 /* P2MSGlobalFunctions.m in Sources */,
+				D0F5FD1B191C2A4600CDC427 /* EditPlanViewController.m in Sources */,
 				8B52C0AF18C2ED7300857982 /* P2MSHTMLNode.m in Sources */,
+				D0C9D603191BF9380084F061 /* MainMenuTableViewController.m in Sources */,
 				8B52C0B318C2ED7300857982 /* P2MSSelectionView.m in Sources */,
 				8B0463B718A04F1A00869FE7 /* AppDelegate.m in Sources */,
 				8B52C0AD18C2ED7300857982 /* P2MSContentView.m in Sources */,

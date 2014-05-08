@@ -18,9 +18,6 @@
     [self.revealViewController revealToggle:sender];
     
 }
-- (IBAction)autoreadMenuButtonClicked:(id)sender {
-    [self.revealViewController revealToggle:sender];
-}
 
 
 - (void)viewDidLoad
@@ -35,7 +32,7 @@
     //self.currentPlan = [Plan new];
     //[self.currentPlan planWithUsername:@"mitchell17"];
     //NSLog(@"%@: %@",self.currentPlan.username, self.currentPlan.planText);
-    //self.navBar.title = self.currentPlan.username;
+    self.navBar.title = [NSString stringWithFormat:@"[%@]", self.currentPlan.username ];
     //self.textView.text = self.currentPlan.planText;
     
     
