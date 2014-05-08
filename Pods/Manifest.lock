@@ -1,24 +1,10 @@
 PODS:
-  - ECSlidingViewController (2.0.1)
-  - MMDrawerController (0.5.2):
-    - MMDrawerController/Core
-    - MMDrawerController/MMDrawerBarButtonItem
-    - MMDrawerController/MMDrawerVisualStates
-    - MMDrawerController/Subclass
-  - MMDrawerController/Core (0.5.2)
-  - MMDrawerController/MMDrawerBarButtonItem (0.5.2):
-    - MMDrawerController/Core
-  - MMDrawerController/MMDrawerVisualStates (0.5.2):
-    - MMDrawerController/Core
-  - MMDrawerController/Subclass (0.5.2):
-    - MMDrawerController/Core
+  - SWRevealViewController (2.0.0)
 
 DEPENDENCIES:
-  - ECSlidingViewController (~> 2.0.1)
-  - MMDrawerController (~> 0.5.2)
+  - SWRevealViewController (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  ECSlidingViewController: d7bb96ee5bbe261ed80ee16a513f94b9fd3c9767
-  MMDrawerController: 60bce0387ff42670d9a5a392e2f531be2fd39ce9
+  SWRevealViewController: 1d01a647e48cd9c7ff856a6095251718810d0dc7
 
-COCOAPODS: 0.31.1
+COCOAPODS: 0.32.1

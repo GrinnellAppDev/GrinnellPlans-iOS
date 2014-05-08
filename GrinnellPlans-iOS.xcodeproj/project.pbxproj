@@ -14,7 +14,6 @@
 		8B0463B318A04F1A00869FE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0463B218A04F1A00869FE7 /* main.m */; };
 		8B0463B718A04F1A00869FE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0463B618A04F1A00869FE7 /* AppDelegate.m */; };
 		8B0463BA18A04F1A00869FE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0463B818A04F1A00869FE7 /* Main.storyboard */; };
-		8B0463BD18A04F1A00869FE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0463BC18A04F1A00869FE7 /* ViewController.m */; };
 		8B0463BF18A04F1A00869FE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0463BE18A04F1A00869FE7 /* Images.xcassets */; };
 		8B0463C618A04F1A00869FE7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0463C518A04F1A00869FE7 /* XCTest.framework */; };
 		8B0463C718A04F1A00869FE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0463A618A04F1A00869FE7 /* Foundation.framework */; };
@@ -23,7 +22,6 @@
 		8B0463D218A04F1A00869FE7 /* GrinnellPlans_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0463D118A04F1A00869FE7 /* GrinnellPlans_iOSTests.m */; };
 		8B52BFE818C2665C00857982 /* Plan.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFE718C2665C00857982 /* Plan.m */; };
 		8B52BFF218C2E0CD00857982 /* SyntexHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFF118C2E0CD00857982 /* SyntexHighlightTextStorage.m */; };
-		8B52BFF518C2E37200857982 /* OtherPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFF418C2E37200857982 /* OtherPlanViewController.m */; };
 		8B52BFFB18C2EAA600857982 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52BFF818C2EAA600857982 /* GTMNSString+HTML.m */; };
 		8B52C0AC18C2ED7300857982 /* P2MSCaretView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52C09818C2ED7300857982 /* P2MSCaretView.m */; };
 		8B52C0AD18C2ED7300857982 /* P2MSContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B52C09A18C2ED7300857982 /* P2MSContentView.m */; };
@@ -95,14 +93,9 @@
 		8B52C12A18C2EDA800857982 /* underline-icon-hover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B52C0F118C2EDA700857982 /* underline-icon-hover@2x.png */; };
 		8B52C12B18C2EDA800857982 /* underline-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B52C0F218C2EDA700857982 /* underline-icon@2x.png */; };
 		8B540B8018C2F3D200AB192E /* P2MSTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B540B7F18C2F3D200AB192E /* P2MSTextView.m */; };
-		8B7792DF18B133AC007404B9 /* PlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792DE18B133AC007404B9 /* PlanViewController.m */; };
-		8B7792EE18B15145007404B9 /* SlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792ED18B15145007404B9 /* SlidingViewController.m */; };
-		8B7792F118B153EC007404B9 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792F018B153EC007404B9 /* MenuViewController.m */; };
-		8B7792F418B1587B007404B9 /* AutoreadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792F318B1587B007404B9 /* AutoreadViewController.m */; };
-		8B7792FA18B2C9BA007404B9 /* MEZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792F718B2C9BA007404B9 /* MEZoomAnimationController.m */; };
-		8B7792FB18B2C9BA007404B9 /* MEFoldAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B7792F918B2C9BA007404B9 /* MEFoldAnimationController.m */; };
 		8B77930218B2CAE9007404B9 /* AutoReadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B77930118B2CAE9007404B9 /* AutoReadCell.m */; };
 		BB995030D7744477A697B888 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF27D8043F4B4F6D8255F490 /* libPods.a */; };
+		D0C3AD801918435F00418587 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0C3AD7F1918435F00418587 /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,8 +120,6 @@
 		8B0463B518A04F1A00869FE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B0463B618A04F1A00869FE7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B0463B918A04F1A00869FE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B0463BB18A04F1A00869FE7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8B0463BC18A04F1A00869FE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8B0463BE18A04F1A00869FE7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B0463C418A04F1A00869FE7 /* GrinnellPlans-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GrinnellPlans-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0463C518A04F1A00869FE7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -139,8 +130,6 @@
 		8B52BFE718C2665C00857982 /* Plan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plan.m; sourceTree = "<group>"; };
 		8B52BFF018C2E0CD00857982 /* SyntexHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyntexHighlightTextStorage.h; sourceTree = "<group>"; };
 		8B52BFF118C2E0CD00857982 /* SyntexHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyntexHighlightTextStorage.m; sourceTree = "<group>"; };
-		8B52BFF318C2E37200857982 /* OtherPlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherPlanViewController.h; sourceTree = "<group>"; };
-		8B52BFF418C2E37200857982 /* OtherPlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherPlanViewController.m; sourceTree = "<group>"; };
 		8B52BFF718C2EAA600857982 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
 		8B52BFF818C2EAA600857982 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
 		8B52C09718C2ED7300857982 /* P2MSCaretView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = P2MSCaretView.h; sourceTree = "<group>"; };
@@ -224,20 +213,10 @@
 		8B52C0F118C2EDA700857982 /* underline-icon-hover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "underline-icon-hover@2x.png"; sourceTree = "<group>"; };
 		8B52C0F218C2EDA700857982 /* underline-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "underline-icon@2x.png"; sourceTree = "<group>"; };
 		8B540B7F18C2F3D200AB192E /* P2MSTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = P2MSTextView.m; sourceTree = "<group>"; };
-		8B7792DD18B133AC007404B9 /* PlanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanViewController.h; sourceTree = "<group>"; };
-		8B7792DE18B133AC007404B9 /* PlanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanViewController.m; sourceTree = "<group>"; };
-		8B7792EC18B15145007404B9 /* SlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlidingViewController.h; sourceTree = "<group>"; };
-		8B7792ED18B15145007404B9 /* SlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlidingViewController.m; sourceTree = "<group>"; };
-		8B7792EF18B153EC007404B9 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		8B7792F018B153EC007404B9 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		8B7792F218B1587B007404B9 /* AutoreadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoreadViewController.h; sourceTree = "<group>"; };
-		8B7792F318B1587B007404B9 /* AutoreadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoreadViewController.m; sourceTree = "<group>"; };
-		8B7792F618B2C9BA007404B9 /* MEZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEZoomAnimationController.h; sourceTree = "<group>"; };
-		8B7792F718B2C9BA007404B9 /* MEZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEZoomAnimationController.m; sourceTree = "<group>"; };
-		8B7792F818B2C9BA007404B9 /* MEFoldAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MEFoldAnimationController.h; sourceTree = "<group>"; };
-		8B7792F918B2C9BA007404B9 /* MEFoldAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MEFoldAnimationController.m; sourceTree = "<group>"; };
 		8B77930018B2CAE9007404B9 /* AutoReadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoReadCell.h; sourceTree = "<group>"; };
 		8B77930118B2CAE9007404B9 /* AutoReadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoReadCell.m; sourceTree = "<group>"; };
+		D0C3AD7E1918435F00418587 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D0C3AD7F1918435F00418587 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		E8847BF72C314F4CBD5C64B7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		FF27D8043F4B4F6D8255F490 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -302,25 +281,14 @@
 		8B0463AC18A04F1A00869FE7 /* GrinnellPlans-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8B52BFEC18C2E09000857982 /* Helpers */,
+				D0C3AD7D191841F700418587 /* Third Party Libraries */,
 				8B7792FC18B2CACC007404B9 /* Models */,
-				8B7792F518B2C9AB007404B9 /* Transitions */,
 				8B0463B518A04F1A00869FE7 /* AppDelegate.h */,
 				8B0463B618A04F1A00869FE7 /* AppDelegate.m */,
-				8B0463BB18A04F1A00869FE7 /* ViewController.h */,
-				8B0463BC18A04F1A00869FE7 /* ViewController.m */,
-				8B7792DD18B133AC007404B9 /* PlanViewController.h */,
-				8B7792DE18B133AC007404B9 /* PlanViewController.m */,
-				8B7792EC18B15145007404B9 /* SlidingViewController.h */,
-				8B7792ED18B15145007404B9 /* SlidingViewController.m */,
-				8B7792EF18B153EC007404B9 /* MenuViewController.h */,
-				8B7792F018B153EC007404B9 /* MenuViewController.m */,
-				8B7792F218B1587B007404B9 /* AutoreadViewController.h */,
-				8B7792F318B1587B007404B9 /* AutoreadViewController.m */,
-				8B52BFF318C2E37200857982 /* OtherPlanViewController.h */,
-				8B52BFF418C2E37200857982 /* OtherPlanViewController.m */,
 				8B0463BE18A04F1A00869FE7 /* Images.xcassets */,
 				8B0463B818A04F1A00869FE7 /* Main.storyboard */,
+				D0C3AD7E1918435F00418587 /* MainViewController.h */,
+				D0C3AD7F1918435F00418587 /* MainViewController.m */,
 				8B0463AD18A04F1A00869FE7 /* Supporting Files */,
 			);
 			path = "GrinnellPlans-iOS";
@@ -355,7 +323,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8B52BFEC18C2E09000857982 /* Helpers */ = {
+		8B52BFEC18C2E09000857982 /* P2MS HTML Parsing */ = {
 			isa = PBXGroup;
 			children = (
 				8B52BFFF18C2ED0C00857982 /* Images */,
@@ -365,7 +333,7 @@
 				8B52BFF018C2E0CD00857982 /* SyntexHighlightTextStorage.h */,
 				8B52BFF118C2E0CD00857982 /* SyntexHighlightTextStorage.m */,
 			);
-			name = Helpers;
+			name = "P2MS HTML Parsing";
 			sourceTree = "<group>";
 		};
 		8B52BFFD18C2ECF900857982 /* Classes */ = {
@@ -471,17 +439,6 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
-		8B7792F518B2C9AB007404B9 /* Transitions */ = {
-			isa = PBXGroup;
-			children = (
-				8B7792F618B2C9BA007404B9 /* MEZoomAnimationController.h */,
-				8B7792F718B2C9BA007404B9 /* MEZoomAnimationController.m */,
-				8B7792F818B2C9BA007404B9 /* MEFoldAnimationController.h */,
-				8B7792F918B2C9BA007404B9 /* MEFoldAnimationController.m */,
-			);
-			name = Transitions;
-			sourceTree = "<group>";
-		};
 		8B7792FC18B2CACC007404B9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +448,14 @@
 				8B52BFE718C2665C00857982 /* Plan.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D0C3AD7D191841F700418587 /* Third Party Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8B52BFEC18C2E09000857982 /* P2MS HTML Parsing */,
+			);
+			name = "Third Party Libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -687,26 +652,19 @@
 				8B52BFE818C2665C00857982 /* Plan.m in Sources */,
 				8B52C0B218C2ED7300857982 /* P2MSLinkViewController.m in Sources */,
 				8B52C0B018C2ED7300857982 /* P2MSIndexedPosition.m in Sources */,
-				8B7792EE18B15145007404B9 /* SlidingViewController.m in Sources */,
-				8B7792FA18B2C9BA007404B9 /* MEZoomAnimationController.m in Sources */,
-				8B0463BD18A04F1A00869FE7 /* ViewController.m in Sources */,
 				8B540B8018C2F3D200AB192E /* P2MSTextView.m in Sources */,
-				8B7792DF18B133AC007404B9 /* PlanViewController.m in Sources */,
 				8B52C0B518C2ED7300857982 /* P2MSWindowView.m in Sources */,
 				8B52C0B118C2ED7300857982 /* P2MSIndexedRange.m in Sources */,
-				8B7792FB18B2C9BA007404B9 /* MEFoldAnimationController.m in Sources */,
 				8B52C0AE18C2ED7300857982 /* P2MSGlobalFunctions.m in Sources */,
 				8B52C0AF18C2ED7300857982 /* P2MSHTMLNode.m in Sources */,
 				8B52C0B318C2ED7300857982 /* P2MSSelectionView.m in Sources */,
 				8B0463B718A04F1A00869FE7 /* AppDelegate.m in Sources */,
 				8B52C0AD18C2ED7300857982 /* P2MSContentView.m in Sources */,
 				8B52C0AC18C2ED7300857982 /* P2MSCaretView.m in Sources */,
-				8B7792F118B153EC007404B9 /* MenuViewController.m in Sources */,
+				D0C3AD801918435F00418587 /* MainViewController.m in Sources */,
 				8B52BFF218C2E0CD00857982 /* SyntexHighlightTextStorage.m in Sources */,
 				8B52C0B418C2ED7300857982 /* P2MSTextWindow.m in Sources */,
 				8B0463B318A04F1A00869FE7 /* main.m in Sources */,
-				8B7792F418B1587B007404B9 /* AutoreadViewController.m in Sources */,
-				8B52BFF518C2E37200857982 /* OtherPlanViewController.m in Sources */,
 				8B77930218B2CAE9007404B9 /* AutoReadCell.m in Sources */,
 				8B52BFFB18C2EAA600857982 /* GTMNSString+HTML.m in Sources */,
 			);

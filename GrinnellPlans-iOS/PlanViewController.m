@@ -22,6 +22,10 @@
 @end
 
 @implementation PlanViewController
+- (IBAction)addToAutoread:(id)sender {
+    NSLog(@"Button Clicked");
+    
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,7 +89,6 @@
     //self.tabBarController
     
     // set delegate for tabbar here
-    self.tabBar.delegate = self;
     textView.editable = NO;
     
 }
@@ -185,7 +188,6 @@
     
     textView.editable = NO;
     [textView resignFirstResponder];
-    [self.tabBar setSelectedItem:nil];
 }
 
 - (IBAction)showFormatKB:(id)sender{

@@ -16,12 +16,6 @@
     
     [plan setUsername:user];
     [plan setPlanText:text];
-    NSURL *planLink = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.grinnellplans.com/read.php?searchname=%@", plan.username]];
-    
-    [plan setPlanLink:planLink];
-    [plan setAutoRead1:auto1];
-    [plan setAutoRead2:auto2];
-    [plan setAutoRead3:auto3];
     
     return plan;
 }
@@ -82,9 +76,23 @@
     
 }
 
--(void)readPlanWithUsername: (NSString*)username CompletionHandler:(void(^)(NSString *response, NSError *error)) completionHandler{
+-(void)planWithUsername: (NSString*)username {
     
-    [self sendPlansHTTPRequestWithTask:@"read" bodyData:[NSString stringWithFormat:@"username=%@",username] completionHandler:completionHandler];
+    [self sendPlansHTTPRequestWithTask:@"read" bodyData:[NSString stringWithFormat:@"username=%@",username] completionHandler:^(NSString *response, NSError *error) {
+        
+        NSMutableDictionary* responseDict;
+        responseDict = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        
+        if ([(NSString*)responseDict[@"success"] boolValue]){
+        self.username = responseDict[@"plandata"][@"username"];
+        //self.lastLogin = responseDict[@"plandata"][@"last_login"];
+        //self.lastUpdated = responseDict[@"plandata"][@"last_updated"];
+        self.partial = [(NSString*)responseDict[@"plandata"][@"partial"] boolValue];
+        self.planText = responseDict[@"plandata"][@"plan"];
+        self.pseudo = responseDict[@"plandata"][@"pseudo"];
+        }
+        else NSLog(@"There was a problem:, %@", responseDict[@"message"]);
+    }];
     
 }
 

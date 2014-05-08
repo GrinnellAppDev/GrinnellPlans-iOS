@@ -11,19 +11,15 @@
 @interface Plan : NSObject
 
 @property (strong, nonatomic) NSString *username;
-@property (nonatomic, strong) NSURL *planLink;
+@property (strong, nonatomic) NSDate *lastLogin;
+@property (strong, nonatomic) NSDate *lastUpdated;
+@property BOOL partial;
 @property (nonatomic, strong) NSString *planText;
-@property (nonatomic, strong) NSMutableArray *autoRead1;
-@property (nonatomic, strong) NSMutableArray *autoRead2;
-@property (nonatomic, strong) NSMutableArray *autoRead3;
-@property (nonatomic, strong) NSString *phoneNumber;
-@property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *email;
+@property (strong, nonatomic) NSString *pseudo;
 
-+(Plan*)planWithUsername:(NSString *)user andPlan:(NSString *)text andAutoRead1:(NSMutableArray *)auto1 andAutoRead2:(NSMutableArray *)auto2 andAutoRead3:(NSMutableArray *)auto3;
 
 - (void)loginAsynchronouslyWithUsername: (NSString*)username Password:(NSString*)password completionHandler:(void (^)(NSString *response, NSError *error))completionHandler;
-
--(void)readPlanWithUsername: (NSString*)username CompletionHandler:(void(^)(NSString *response, NSError *error)) completionHandler;
+-(NSString*) loginSynchronouslyWithUsername: (NSString*)username Password:(NSString*)password;
+-(void)planWithUsername: (NSString*)username;
 
 @end
