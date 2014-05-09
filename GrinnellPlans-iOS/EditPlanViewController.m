@@ -49,22 +49,16 @@
 #pragma mark - UITextViewDelegate Methods
 
 - (BOOL)textViewShouldBeginEditing:(UITextView *)textView{
-    NSLog(@"textViewShouldBeginEditing:");
     return YES;
 }
 
 - (void)textViewDidBeginEditing:(UITextView *)textView {
-    NSLog(@"textViewDidBeginEditing:");
-    textView.backgroundColor = [UIColor greenColor];
 }
 - (BOOL)textViewShouldEndEditing:(UITextView *)textView{
-    NSLog(@"textViewShouldEndEditing:");
-    textView.backgroundColor = [UIColor whiteColor];
     return YES;
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    NSLog(@"textViewDidEndEditing:");
 }
 
 /*

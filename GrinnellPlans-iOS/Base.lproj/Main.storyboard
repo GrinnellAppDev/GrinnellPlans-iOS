@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvb-vZ-zpW">
-                                <rect key="frame" x="0.0" y="105" width="320" height="277"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="btf-eK-dAf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-v9-MfE">
                                 <rect key="frame" x="-9" y="524" width="329" height="44"/>
@@ -58,12 +58,15 @@
                                 <action selector="mainMenuButtonClicked:" destination="50D-5Y-RFh" id="naB-6l-FPP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Autoread" id="GhY-4P-tMy"/>
+                        <barButtonItem key="rightBarButtonItem" image="bubbleMenu" id="GhY-4P-tMy">
+                            <connections>
+                                <action selector="autoreadListButtonClicked:" destination="50D-5Y-RFh" id="eoV-vi-gkI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="autoreadIndicator" destination="egO-yU-OnR" id="cce-Go-Jqo"/>
                         <outlet property="navBar" destination="Ze7-CZ-f2p" id="Mr9-w2-X7q"/>
-                        <outlet property="textView" destination="dvb-vZ-zpW" id="3oa-mL-BDb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMf-pb-aTq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -110,6 +113,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="50D-5Y-RFh" kind="custom" customClass="SWRevealViewControllerSegue" id="zlR-ft-afn"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" textLabel="xYN-7x-kp8" style="IBUITableViewCellStyleDefault" id="9Go-SX-jFQ">
                                         <rect key="frame" x="0.0" y="88" width="320" height="44"/>
@@ -389,6 +395,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eFW-FB-g75"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcc-Nr-9A0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -476,6 +483,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bubbleMenu" width="30" height="30"/>
         <image name="stack" width="30" height="30"/>
         <image name="star" width="30" height="30"/>
     </resources>
@@ -484,4 +492,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="zlR-ft-afn"/>
+    </inferredMetricsTieBreakers>
 </document>

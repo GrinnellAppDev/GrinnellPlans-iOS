@@ -19,6 +19,9 @@
     
 }
 
+- (IBAction)autoreadListButtonClicked:(id)sender {
+    [self.revealViewController rightRevealToggle:sender];
+}
 
 - (void)viewDidLoad
 {
@@ -66,6 +69,8 @@
     
     
     }
+
+
 
 
 @end

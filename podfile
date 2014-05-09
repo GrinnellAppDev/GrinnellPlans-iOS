@@ -1,2 +1,4 @@
 platform :ios, '7.0'
 pod 'SWRevealViewController', '~> 2.0.0'
+pod 'FlurrySDK'
+pod 'CrashlyticsFramework'

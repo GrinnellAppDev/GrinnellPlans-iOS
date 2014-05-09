@@ -1,10 +1,18 @@
 PODS:
+  - CrashlyticsFramework (2.1.7)
+  - FlurrySDK (4.4.0):
+    - FlurrySDK/FlurrySDK
+  - FlurrySDK/FlurrySDK (4.4.0)
   - SWRevealViewController (2.0.0)
 
 DEPENDENCIES:
+  - CrashlyticsFramework
+  - FlurrySDK
   - SWRevealViewController (~> 2.0.0)
 
 SPEC CHECKSUMS:
+  CrashlyticsFramework: 569d2b1c71922aa480bfdc55df4c86aedf7b215c
+  FlurrySDK: 2cd8f2ce2383ca152c5d96fa34cb9ef29706feda
   SWRevealViewController: 1d01a647e48cd9c7ff856a6095251718810d0dc7
 
 COCOAPODS: 0.32.1
