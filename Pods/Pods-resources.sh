@@ -41,6 +41,15 @@ install_resource()
       ;;
   esac
 }
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/GFSettings.storyboard"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-logo.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-logo@2x.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-logo.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-logo@2x.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-settings.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-settings@2x.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-status.png"
+install_resource "Lookback/lookback/HD/Lookback.framework/Versions/A/Resources/lookback-recorder-status@2x.png"
 
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 if [[ "${ACTION}" == "install" ]]; then

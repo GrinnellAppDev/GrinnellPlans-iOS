@@ -23,23 +23,17 @@
     [self.revealViewController rightRevealToggle:sender];
 }
 
+
 - (void)viewDidLoad
 {
+    self.currentPlan.username = @"MITCHELL17";
+    self.title = [NSString stringWithFormat:@"[%@]", [self.currentPlan.username lowercaseString]];
+    
+    
     [super viewDidLoad];
     self.currentPlan = [Plan new];
-    self.currentPlan.username = @"mitchell17";
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 
-    
-    //[[Plan new] loginSynchronouslyWithUsername:@"mitchell17" Password:@"8YigOaCdAhpz"];
-    //self.currentPlan = [Plan new];
-    //[self.currentPlan planWithUsername:@"mitchell17"];
-    //NSLog(@"%@: %@",self.currentPlan.username, self.currentPlan.planText);
-    self.navBar.title = [NSString stringWithFormat:@"[%@]", self.currentPlan.username ];
-    //self.textView.text = self.currentPlan.planText;
-    
-    
-    // Do any additional setup after loading the view.
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{

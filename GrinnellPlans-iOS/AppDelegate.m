@@ -9,13 +9,14 @@
 #import "AppDelegate.h"
 #import "Crashlytics/Crashlytics.h"
 #import "Flurry.h"
-
+#import <Lookback/Lookback.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    
+    [Lookback_Weak setupWithAppToken:@"L83phaYXuqZ6SdG7L"];
+    [Lookback_Weak lookback].shakeToRecord = YES;
     
     [Flurry startSession:@"S88PTR5FRM6FHVSRV7BV"];
     [Crashlytics startWithAPIKey:@"45894d9e8a6bc3b8513651d6de36159e2c836e51"];

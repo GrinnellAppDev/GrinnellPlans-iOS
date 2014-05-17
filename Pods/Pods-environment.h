@@ -24,6 +24,12 @@
 #define COCOAPODS_VERSION_MINOR_FlurrySDK_FlurrySDK 4
 #define COCOAPODS_VERSION_PATCH_FlurrySDK_FlurrySDK 0
 
+// Lookback
+#define COCOAPODS_POD_AVAILABLE_Lookback
+#define COCOAPODS_VERSION_MAJOR_Lookback 0
+#define COCOAPODS_VERSION_MINOR_Lookback 6
+#define COCOAPODS_VERSION_PATCH_Lookback 2
+
 // SWRevealViewController
 #define COCOAPODS_POD_AVAILABLE_SWRevealViewController
 #define COCOAPODS_VERSION_MAJOR_SWRevealViewController 2

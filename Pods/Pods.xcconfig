@@ -1,7 +1,7 @@
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/CrashlyticsFramework"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/CrashlyticsFramework" "$(PODS_ROOT)/Lookback/lookback/HD"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CrashlyticsFramework" "${PODS_ROOT}/Headers/FlurrySDK" "${PODS_ROOT}/Headers/SWRevealViewController"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/CrashlyticsFramework" "${PODS_ROOT}/Headers/FlurrySDK" "${PODS_ROOT}/Headers/Lookback" "${PODS_ROOT}/Headers/SWRevealViewController"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/FlurrySDK/Flurry"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CrashlyticsFramework" -isystem "${PODS_ROOT}/Headers/FlurrySDK" -isystem "${PODS_ROOT}/Headers/SWRevealViewController"
-OTHER_LDFLAGS = -ObjC -lFlurry_4.4.0 -framework CoreGraphics -framework Crashlytics -framework Security -framework SystemConfiguration -framework UIKit
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/CrashlyticsFramework" -isystem "${PODS_ROOT}/Headers/FlurrySDK" -isystem "${PODS_ROOT}/Headers/Lookback" -isystem "${PODS_ROOT}/Headers/SWRevealViewController"
+OTHER_LDFLAGS = -ObjC -lFlurry_4.4.0 -framework AVFoundation -framework AudioToolbox -framework CoreGraphics -framework CoreMedia -framework CoreVideo -framework Crashlytics -framework Lookback -framework MediaPlayer -framework QuartzCore -framework Security -framework SystemConfiguration -framework UIKit
 PODS_ROOT = ${SRCROOT}/Pods

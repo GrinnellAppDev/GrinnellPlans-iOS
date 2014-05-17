@@ -1,4 +1,5 @@
 platform :ios, '7.0'
-pod 'SWRevealViewController', '~> 2.0.0'
+pod 'SWRevealViewController'
 pod 'FlurrySDK'
 pod 'CrashlyticsFramework'
+pod 'Lookback'

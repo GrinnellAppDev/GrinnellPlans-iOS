@@ -10,14 +10,45 @@
 
 @implementation Plan
 
-+(Plan*) planWithUsername:(NSString *)user andPlan:(NSString *)text andAutoRead1:(NSMutableArray *)auto1 andAutoRead2:(NSMutableArray *)auto2 andAutoRead3:(NSMutableArray *)auto3 {
++(void)planWithUsername:(NSString *)username Password:(NSString *)password completionHandler:(void (^)(Plan *, NSError *))completionHandler{
+    Plan *initialPlan =[Plan new];
+    [initialPlan sendPlansHTTPRequestWithTask:@"login" bodyData:[NSString stringWithFormat:@"username=%@&password=%@",username, password] completionHandler:^(NSString *response, NSError *error) {
+        
+        NSMutableDictionary* responseDict;
+        responseDict = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        
+        if ([(NSString*)responseDict[@"success"] boolValue]){
+            
+            [Plan planFromUsername:initialPlan.username Credentials:initialPlan completionHandler:^(Plan *plan, NSError *error) {
+                plan.autoreadList = responseDict[@"autofingerList"];
+                plan.username= username;
+                plan.password = password;
+                
+                
+                
+                
+                completionHandler(plan, nil);
+            }];
+        }
+        else NSLog(@"There was a problem:, %@", responseDict[@"message"]);
+        
+    }];
     
-    Plan *plan = [[Plan alloc] init];
+}
+
++(void)planFromUsername:(NSString *)username Credentials:(Plan *)creds completionHandler:(void (^)(Plan *, NSError *))completionHandler{
+    Plan *plan =[Plan new];
+    [plan sendPlansHTTPRequestWithTask:@"read" bodyData:[NSString stringWithFormat:@"username=%@",username] completionHandler:^(NSString *response, NSError *error){
+        NSMutableDictionary* responseDict;
+        responseDict = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+        
+        NSLog(@"%@", responseDict);
+        
+        
+        completionHandler(plan, nil);
+    }];
     
-    [plan setUsername:user];
-    [plan setPlanText:text];
     
-    return plan;
 }
 
 -(NSString*) loginSynchronouslyWithUsername: (NSString*)username Password:(NSString*)password {
@@ -84,12 +115,12 @@
         responseDict = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
         
         if ([(NSString*)responseDict[@"success"] boolValue]){
-        self.username = responseDict[@"plandata"][@"username"];
-        //self.lastLogin = responseDict[@"plandata"][@"last_login"];
-        //self.lastUpdated = responseDict[@"plandata"][@"last_updated"];
-        self.partial = [(NSString*)responseDict[@"plandata"][@"partial"] boolValue];
-        self.planText = responseDict[@"plandata"][@"plan"];
-        self.pseudo = responseDict[@"plandata"][@"pseudo"];
+            self.username = responseDict[@"plandata"][@"username"];
+            //self.lastLogin = responseDict[@"plandata"][@"last_login"];
+            //self.lastUpdated = responseDict[@"plandata"][@"last_updated"];
+            self.partial = [(NSString*)responseDict[@"plandata"][@"partial"] boolValue];
+            self.planText = responseDict[@"plandata"][@"plan"];
+            self.pseudo = responseDict[@"plandata"][@"pseudo"];
         }
         else NSLog(@"There was a problem:, %@", responseDict[@"message"]);
     }];
